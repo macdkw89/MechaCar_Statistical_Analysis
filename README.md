@@ -25,6 +25,23 @@ We believe the model accurately predicts the mpg of MechaCar prototypes because 
 
 When looking at the total_summary above, highlighted in yellow we can see that the variance for PSI on the entire dataset is 62.29356, which is below the 100psi threshold needed to pass specifications. However, when looking at the individual lots, lots 1 & 2 are within specifications (highlighted in green), but lot 3 has a variance of 170.2861224 which far exceeds the threshold needed to pass specifications (highlighted in red). 
 
+## T-Tests on Suspension Coils
+
+![summary](/images/total_ttest.png)
+
+The T-Test conducted against the entire dataset finds a p-value of 0.06028, which meets the significance level.
+
+![summary](/images/lot1_ttest.png)
+
+The T-Test conducted against Lot1 finds a p-value of 1, which meets the significance level.
+
+![summary](/images/lot2_ttest.png)
+
+The T-Test conducted against Lot2 finds a p-value of 0.6072, which meets the significance level.
+
+![summary](/images/lot3_ttest.png)
+
+The T-Test conducted against Lot3 finds a p-value of 0.04168, which does **NOT** meets the significance level meaning there is a statistical anomaly in the data when compared to other lots. 
 
 
 

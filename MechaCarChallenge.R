@@ -9,7 +9,6 @@ mechacar_lm <- lm(mpg ~
 
 summary(mechacar_lm)
 
-
 suspension_data <- read.csv("csv/Suspension_Coil.csv", stringsAsFactors = FALSE, check.names = FALSE)
 
 total_summary <- suspension_data %>%
@@ -30,7 +29,10 @@ lot_summary <- suspension_data %>%
     .groups = 'keep'
     )
 
-
+t.test(suspension_data$PSI, mu = 1500)
+t.test(subset(suspension_data, Manufacturing_Lot=="Lot1")$PSI, mu = 1500)
+t.test(subset(suspension_data, Manufacturing_Lot=="Lot2")$PSI, mu = 1500)
+t.test(subset(suspension_data, Manufacturing_Lot=="Lot3")$PSI, mu = 1500)
 
 
 
