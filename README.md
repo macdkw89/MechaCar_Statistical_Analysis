@@ -43,17 +43,22 @@ The T-Test conducted against Lot2 finds a p-value of 0.6072, which meets the sig
 
 The T-Test conducted against Lot3 finds a p-value of 0.04168, which does **NOT** meets the significance level meaning there is a statistical anomaly in the data when compared to other lots. 
 
+## Study Design: MechaCar vs Competition
 
+When comparing MechaCar's mpg against its competition, one factor that is overlooked that is already included in our dataset is the weight of the vehicle. A larger SUV style vehicle is going to be heavier than a small sport coupe and the expectations of mpg is going to be very different, and it is unfair to compare a Prius against a Hummer when considering mpg. 
 
+Using the following code: 
+mechacar_data %>% ggplot(aes(x=vehicle_weight,y=mpg)) + geom_point() + geom_smooth(method=lm)
 
+![plot](/images/mpg_weight_plot.png)
 
+I have created a line chart with a trend line showing the vehicle weight vs the mpg. I was very disappointed to find that the data supplied to us appears to be randomly fabricated, so this inquiry is pointless to conduct further with the current data.
 
+Instead, let's say that we want to compare a vehicle's horsepower vs its mpg. 
 
+Null Hypothesis: "There is no statistical difference between MechaCar's horsepower and the horsepower of comparable vehicles by other manufacturers." 
 
+Alternative Hypothesis: "There is a statistical difference between MechaCar's horsepower and the horsepower of comparable vehicles by other manufacturers."
 
-
-
-
-
-
-
+We would then create a t-test to see if MechaCar's horsepower and mpg are statistically different from comparable models. 
+We would have to gather the horsepower data from MechaCar as well as its competitors' comparable vehicles. 

@@ -35,4 +35,6 @@ t.test(subset(suspension_data, Manufacturing_Lot=="Lot2")$PSI, mu = 1500)
 t.test(subset(suspension_data, Manufacturing_Lot=="Lot3")$PSI, mu = 1500)
 
 
+###### deliverable 4 example code below
 
+mechacar_data %>% ggplot(aes(x=vehicle_weight,y=mpg)) + geom_point() + geom_smooth(method=lm)
