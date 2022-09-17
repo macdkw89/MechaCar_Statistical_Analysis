@@ -48,7 +48,9 @@ The T-Test conducted against Lot3 finds a p-value of 0.04168, which does **NOT**
 When comparing MechaCar's mpg against its competition, one factor that is overlooked that is already included in our dataset is the weight of the vehicle. A larger SUV style vehicle is going to be heavier than a small sport coupe and the expectations of mpg is going to be very different, and it is unfair to compare a Prius against a Hummer when considering mpg. 
 
 Using the following code: 
+```R
 mechacar_data %>% ggplot(aes(x=vehicle_weight,y=mpg)) + geom_point() + geom_smooth(method=lm)
+```
 
 ![plot](/images/mpg_weight_plot.png)
 
